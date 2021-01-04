@@ -1,3 +1,15 @@
+.section-about {
+  background-color: orchid;
+  grid-column: center-start/center-end;
+  grid-row: 2/3; }
+
+:root {
+  --color-white: #ffff;
+  --color-black: #0000;
+  --color-gradient-1: #ba6bf0;
+  --color-gradient-2: #4bd1ff;
+  --color-gradient-3: #db78ff; }
+
 *,
 *::after,
 *::before {
@@ -10,4 +22,27 @@ html {
   box-sizing: border-box; }
 
 body {
-  font-family: "Lato", sans-serif; }
+  font-family: "Lato", sans-serif;
+  color: #000000;
+  font-weight: 300;
+  line-height: 1.6;
+  display: grid;
+  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(14rem, min-content) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+  grid-template-rows: 100vh min-content 40vw repeat(2, min-content); }
+
+.footer {
+  background-color: palevioletred;
+  grid-column: full-start/full-end; }
+
+.header {
+  grid-row: 1/2;
+  grid-column: full-start/full-end;
+  background-color: orange; }
+
+.section-history {
+  background-color: paleturquoise;
+  grid-column: full-start/full-end; }
+
+.portfolio {
+  background-color: #000000;
+  grid-column: full-start/full-end; }
