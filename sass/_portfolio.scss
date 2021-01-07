@@ -24,6 +24,10 @@
     display: grid;
     grid-template-rows: repeat(auto-fit, minmax(15rem, 1fr));
     grid-row-gap: 2rem;
+
+    @media only screen and (max-width: $bp-medium) {
+      width: 90%;
+    }
   }
   &__card {
     position: relative;
@@ -34,6 +38,11 @@
     align-items: center;
     padding: 3rem;
     z-index: 2;
+
+    @media only screen and (max-width: 51.5625em) {
+      flex-direction: column;
+    }
+
     & > * {
       transform: skewX(12deg);
     }
@@ -59,15 +68,28 @@
     display: inline-block;
     margin: 2rem;
     font-weight: 700;
-    font-size: 2rem;
+    font-size: 1.75rem;
     font-style: italic;
     width: 35%;
+
+    @media only screen and (max-width: $bp-medium) {
+      font-size: 1.6rem;
+    }
+    @media only screen and (max-width: $bp-small) {
+      text-align: center;
+      width: 100%;
+      font-size: 1.7rem;
+    }
   }
   &__description {
     display: inline-block;
     margin: 0 4rem;
     margin-top: 1rem;
     font-size: 1.5rem;
+
+    @media only screen and (max-width: $bp-medium) {
+      font-size: 1.4rem;
+    }
   }
   &__details {
     display: flex;
@@ -125,6 +147,10 @@
     cursor: pointer;
     transition: all 0.2s ease;
     z-index: 1;
+
+    @media only screen and (max-width: $bp-medium) {
+      font-size: 1.5rem;
+    }
 
     &:hover {
       background-color: darken(#db78ff, 10);

@@ -3,6 +3,12 @@
 }
 .u-margin-bottom-medium {
   margin-bottom: 4rem !important;
+  @media only screen and (max-width: $bp-extra-small) {
+    margin-bottom: 3rem !important;
+  }
+  @media only screen and (max-width: $bp-tiny) {
+    margin-bottom: 2rem !important;
+  }
 }
 .u-margin-bottom-big {
   margin-bottom: 6rem !important;

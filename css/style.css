@@ -25,6 +25,10 @@
     transform: translateY(-3px);
     transition: all 0.3s;
     cursor: pointer; }
+    @media only screen and (max-width: 51.5625em) {
+      .section-about__icon {
+        height: 9rem;
+        width: 9rem; } }
     .section-about__icon--active {
       fill: #ba6bf0;
       box-shadow: 0rem 1rem 2rem rgba(255, 255, 255, 0.2);
@@ -45,8 +49,20 @@
     z-index: 2;
     font-weight: 700;
     color: rgba(186, 107, 240, 0.5); }
+    @media only screen and (max-width: 59.375em) {
+      .section-about__text::before {
+        top: -13rem;
+        left: -9rem; } }
+    @media only screen and (max-width: 51.5625em) {
+      .section-about__text::before {
+        font-size: 20rem;
+        top: -9rem;
+        left: -6rem; } }
   .section-about__detail {
     width: 90%; }
+  @media only screen and (max-width: 46.875em) {
+    .section-about .paragraph {
+      font-size: 1.5rem; } }
 
 *,
 *::after,
@@ -58,6 +74,12 @@
 html {
   font-size: 62.5%;
   box-sizing: border-box; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (max-width: 51.5625em) {
+    html {
+      font-size: 47%; } }
 
 body {
   font-family: "Lato", sans-serif;
@@ -70,6 +92,9 @@ body {
   display: grid;
   grid-template-columns: [full-start] 1fr [center-start] repeat(8, [col-start] minmax(14rem, min-content) [col-end]) [center-end] 1fr [full-end];
   grid-template-rows: 100vh; }
+  @media only screen and (max-width: 59.375em) {
+    .container {
+      grid-template-columns: [full-start] min-content [center-start] repeat(8, [col-start] minmax(min-content, max-content) [col-end]) [center-end] min-content [full-end]; } }
 
 .footer {
   grid-column: full-start/full-end;
@@ -140,6 +165,10 @@ body {
   justify-content: space-between;
   align-items: center;
   align-self: flex-start; }
+  @media only screen and (max-width: 59.375em) {
+    .nav {
+      width: 0;
+      display: none; } }
   .nav__logo {
     height: 4rem; }
   .nav__list {
@@ -179,6 +208,14 @@ body {
   transform: translateY(-3px);
   cursor: pointer;
   transition: all 0.3s; }
+  @media only screen and (max-width: 51.5625em) {
+    .btn:link,
+    .btn:visited {
+      font-size: 2.5rem; } }
+  @media only screen and (max-width: 39.0625em) {
+    .btn:link,
+    .btn:visited {
+      font-size: 2rem; } }
   .btn:link::before,
   .btn:visited::before {
     content: "";
@@ -232,6 +269,9 @@ body {
     justify-self: end;
     padding: 2.5rem 4rem;
     border-right: 2px solid #ffff; }
+    @media only screen and (max-width: 51.5625em) {
+      .section-history__date {
+        font-size: 1.75rem; } }
     .section-history__date::after {
       content: "";
       display: block;
@@ -250,6 +290,9 @@ body {
     width: 100%;
     text-align: start;
     font-size: 2rem; }
+    @media only screen and (max-width: 51.5625em) {
+      .section-history__description {
+        font-size: 1.75rem; } }
 
 .portfolio {
   background-color: #000000;
@@ -300,6 +343,9 @@ body {
     display: grid;
     grid-template-rows: repeat(auto-fit, minmax(15rem, 1fr));
     grid-row-gap: 2rem; }
+    @media only screen and (max-width: 59.375em) {
+      .portfolio__projects {
+        width: 90%; } }
   .portfolio__card {
     position: relative;
     background-color: rgba(255, 255, 255, 0.65);
@@ -309,6 +355,9 @@ body {
     align-items: center;
     padding: 3rem;
     z-index: 2; }
+    @media only screen and (max-width: 51.5625em) {
+      .portfolio__card {
+        flex-direction: column; } }
     .portfolio__card > * {
       transform: skewX(12deg); }
     .portfolio__card--1::after {
@@ -355,14 +404,25 @@ body {
     display: inline-block;
     margin: 2rem;
     font-weight: 700;
-    font-size: 2rem;
+    font-size: 1.75rem;
     font-style: italic;
     width: 35%; }
+    @media only screen and (max-width: 59.375em) {
+      .portfolio__project-title {
+        font-size: 1.6rem; } }
+    @media only screen and (max-width: 51.5625em) {
+      .portfolio__project-title {
+        text-align: center;
+        width: 100%;
+        font-size: 1.7rem; } }
   .portfolio__description {
     display: inline-block;
     margin: 0 4rem;
     margin-top: 1rem;
     font-size: 1.5rem; }
+    @media only screen and (max-width: 59.375em) {
+      .portfolio__description {
+        font-size: 1.4rem; } }
   .portfolio__details {
     display: flex;
     flex-direction: column;
@@ -382,6 +442,9 @@ body {
     cursor: pointer;
     transition: all 0.2s ease;
     z-index: 1; }
+    @media only screen and (max-width: 59.375em) {
+      .portfolio__btn {
+        font-size: 1.5rem; } }
     .portfolio__btn:hover {
       background-color: #cd45ff;
       color: white;
@@ -401,6 +464,13 @@ body {
   align-items: center;
   grid-column-gap: 4rem;
   margin-bottom: 4rem; }
+  @media only screen and (max-width: 59.375em) {
+    .services {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(auto-fit, minmax(20rem, 1fr));
+      grid-column-gap: 0;
+      margin: 0 auto;
+      width: 90%; } }
   .services__card {
     background-color: rgba(238, 238, 238, 0.55);
     font-size: 1.7rem;
@@ -411,6 +481,11 @@ body {
     justify-content: center;
     border-radius: 10px;
     transition: all 0.3s ease; }
+    @media only screen and (max-width: 59.375em) {
+      .services__card {
+        margin-bottom: 2.5rem;
+        flex-direction: row;
+        align-items: center; } }
     .services__card:hover {
       transform: translateY(-3px) scale(1.05);
       box-shadow: 0 2rem 2.5rem rgba(255, 255, 255, 0.3); }
@@ -420,26 +495,53 @@ body {
     height: 10rem;
     margin-top: 1.5rem;
     margin-bottom: 3rem; }
+    @media only screen and (max-width: 59.375em) {
+      .services__icon {
+        margin: 0 1.5rem; } }
+    @media only screen and (max-width: 34.375em) {
+      .services__icon {
+        width: 9rem;
+        height: 9rem; } }
   .services__title {
     font-size: 1.7rem;
     font-weight: 400;
     font-style: italic;
     margin-bottom: 2rem; }
+    @media only screen and (max-width: 59.375em) {
+      .services__title {
+        margin: 0 2rem; } }
+    @media only screen and (max-width: 34.375em) {
+      .services__title {
+        font-size: 1.5rem; } }
   .services__description {
     hyphens: auto;
     font-weight: 300;
     font-size: 1.6rem; }
+    @media only screen and (max-width: 34.375em) {
+      .services__description {
+        font-size: 1.5rem; } }
   .services__list {
     list-style: none;
     display: flex;
     align-items: center;
     justify-content: center; }
+    @media only screen and (max-width: 34.375em) {
+      .services__list {
+        flex-direction: column; } }
   .services__item {
     padding: 0 1.5rem;
     font-size: 1.6rem;
     text-align: center; }
     .services__item:not(:last-of-type) {
       border-right: 1px solid #ffff; }
+      @media only screen and (max-width: 34.375em) {
+        .services__item:not(:last-of-type) {
+          border: none;
+          border-bottom: 1px solid #ffff;
+          margin-bottom: 0.5rem; } }
+    @media only screen and (max-width: 39.0625em) {
+      .services__item {
+        font-size: 1.4rem; } }
 
 .tech__title {
   font-size: 2rem;
@@ -452,7 +554,7 @@ body {
   margin: 0 auto;
   color: #ffffff;
   font-weight: 300;
-  font-size: 7rem;
+  font-size: 6.5rem;
   position: relative;
   align-self: flex-start;
   flex: 1;
@@ -461,6 +563,12 @@ body {
   justify-content: start;
   animation: animateOpacity 1.25s ease-in;
   letter-spacing: 0.5rem; }
+  @media only screen and (max-width: 51.5625em) {
+    .heading-primary {
+      font-size: 6rem; } }
+  @media only screen and (max-width: 39.0625em) {
+    .heading-primary {
+      font-size: 5rem; } }
   .heading-primary span {
     margin-left: 1.5rem;
     font-weight: bolder; }
@@ -487,6 +595,12 @@ body {
   flex: 0;
   animation: moveText 1s ease 0.5s;
   animation-fill-mode: backwards; }
+  @media only screen and (max-width: 51.5625em) {
+    .sub-heading {
+      font-size: 3rem; } }
+  @media only screen and (max-width: 39.0625em) {
+    .sub-heading {
+      font-size: 2.5rem; } }
 
 .heading-secondary {
   text-transform: uppercase;
@@ -536,6 +650,12 @@ body {
 
 .u-margin-bottom-medium {
   margin-bottom: 4rem !important; }
+  @media only screen and (max-width: 39.0625em) {
+    .u-margin-bottom-medium {
+      margin-bottom: 3rem !important; } }
+  @media only screen and (max-width: 34.375em) {
+    .u-margin-bottom-medium {
+      margin-bottom: 2rem !important; } }
 
 .u-margin-bottom-big {
   margin-bottom: 6rem !important; }

@@ -27,6 +27,10 @@
     padding: 2.5rem 4rem;
     border-right: 2px solid $color-white;
 
+    @media only screen and (max-width: $bp-small) {
+      font-size: 1.75rem;
+    }
+
     &::after {
       content: "";
       display: block;
@@ -47,5 +51,9 @@
     width: 100%;
     text-align: start;
     font-size: 2rem;
+
+    @media only screen and (max-width: $bp-small) {
+      font-size: 1.75rem;
+    }
   }
 }

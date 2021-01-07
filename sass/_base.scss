@@ -5,6 +5,13 @@ $color-gradient-2: #4bd1ff;
 $color-gradient-3: #db78ff;
 $color-grey-1: #eeee;
 
+//Breakpoints
+$bp-big: 75em;
+$bp-medium: 59.375em;
+$bp-small: 51.5625em;
+$bp-extra-small: 39.0625em;
+$bp-tiny: 34.375em;
+////
 *,
 *::after,
 *::before {
@@ -16,6 +23,12 @@ $color-grey-1: #eeee;
 html {
   font-size: 62.5%;
   box-sizing: border-box;
+  @media only screen and (max-width: $bp-big) {
+    font-size: 50%;
+  }
+  @media only screen and (max-width: $bp-small) {
+    font-size: 47%;
+  }
 }
 body {
   font-family: "Lato", sans-serif;
@@ -27,6 +40,14 @@ body {
 
 .container {
   display: grid;
+  @media only screen and (max-width: $bp-medium) {
+    grid-template-columns:
+      [full-start] min-content [center-start] repeat(
+        8,
+        [col-start] minmax(min-content, max-content) [col-end]
+      )
+      [center-end] min-content [full-end];
+  }
   grid-template-columns:
     [full-start] 1fr [center-start] repeat(
       8,

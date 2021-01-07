@@ -32,6 +32,11 @@
     transition: all 0.3s;
     cursor: pointer;
 
+    @media only screen and (max-width: 51.5625em) {
+      height: 9rem;
+      width: 9rem;
+    }
+
     &--active {
       fill: #ba6bf0;
       box-shadow: 0rem 1rem 2rem rgba(#ffffff, 0.2);
@@ -58,9 +63,26 @@
     z-index: 2;
     font-weight: 700;
     color: rgba(#ba6bf0, 0.5);
+
+    @media only screen and (max-width: 59.375em) {
+      top: -13rem;
+      left: -9rem;
+    }
+
+    @media only screen and (max-width: 51.5625em) {
+      font-size: 20rem;
+      top: -9rem;
+      left: -6rem;
+    }
   }
 
   &__detail {
     width: 90%;
+  }
+
+  .paragraph {
+    @media only screen and (max-width: 46.875em) {
+      font-size: 1.5rem;
+    }
   }
 }
