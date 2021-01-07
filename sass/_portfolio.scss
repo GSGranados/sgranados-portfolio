@@ -1,0 +1,136 @@
+@mixin project-number {
+  position: absolute;
+  z-index: 1;
+  top: -3rem;
+  right: 0;
+  font-size: 10rem;
+  font-weight: 700;
+  opacity: 0.2;
+  color: darken(#db78ff, 20);
+}
+
+.portfolio {
+  background-color: #000000;
+  grid-column: full-start/full-end;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.65)),
+    url(../img/portfolio-bg.jpg);
+  background-size: cover;
+  padding: 3rem;
+
+  &__projects {
+    margin: 0 auto;
+    width: 80%;
+    padding: 3rem;
+    display: grid;
+    grid-template-rows: repeat(auto-fit, minmax(15rem, 1fr));
+    grid-row-gap: 2rem;
+  }
+  &__card {
+    position: relative;
+    background-color: rgba(#ffff, 0.65);
+    margin-bottom: 2rem;
+    transform: skewX(-12deg);
+    display: flex;
+    align-items: center;
+    padding: 3rem;
+    z-index: 2;
+    & > * {
+      transform: skewX(12deg);
+    }
+
+    &--1::after {
+      content: "\0030 \0031";
+      @include project-number;
+    }
+    &--2::after {
+      content: "\0030 \0032";
+      @include project-number;
+    }
+    &--3::after {
+      content: "\0030 \0033";
+      @include project-number;
+    }
+    &--4::after {
+      content: "\0030 \0034";
+      @include project-number;
+    }
+  }
+  &__project-title {
+    display: inline-block;
+    margin: 2rem;
+    font-weight: 700;
+    font-size: 2rem;
+    font-style: italic;
+    width: 35%;
+  }
+  &__description {
+    display: inline-block;
+    margin: 0 4rem;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+  }
+  &__details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  /*&__project-tech {
+    grid-column: 1/-1;
+    padding: 2rem 0;
+    margin: 3rem 1.5rem 0 1.5rem;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+
+  &__tech-item {
+    position: relative;
+    font-size: 1.45rem;
+    display: flex;
+    align-items: center;
+    margin: 1.5rem;
+  }
+  &__tech-item::before {
+    content: "";
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 1rem;
+    background-image: url(../img/chevron-thin-right.svg);
+    background-size: cover;
+    //Support queries
+    @supports (-webkit-mask-image: url()) or (mask-image: url()) {
+      background-color: #db78ff;
+      -webkit-mask-image: url(../img/chevron-thin-right.svg);
+      mask-image: url(../img/chevron-thin-right.svg);
+      -webkit-mask-size: cover;
+      mask-size: cover;
+      background-image: none;
+    }
+  }
+*/
+  &__btn {
+    align-self: flex-start;
+    position: relative;
+    margin: 2.5rem 3rem 1rem 3rem;
+    padding: 0 2rem;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #ba6bf0;
+    font-size: 1.7rem;
+    letter-spacing: 0.2rem;
+    font-weight: 400;
+    color: darken(#ba6bf0, 35);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    z-index: 1;
+
+    &:hover {
+      background-color: darken(#db78ff, 10);
+      color: white;
+      transform: translateY(-4px);
+      box-shadow: 0 1rem 2rem rgba(#000000, 0.4);
+    }
+  }
+}

@@ -1,0 +1,38 @@
+$color-white: #ffff;
+$color-black: #0000;
+$color-gradient-1: #ba6bf0;
+$color-gradient-2: #4bd1ff;
+$color-gradient-3: #db78ff;
+$color-grey-1: #eeee;
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Lato", sans-serif;
+  color: #000000;
+  font-weight: 300;
+  line-height: 1.6;
+  background-color: #000000;
+}
+
+.container {
+  display: grid;
+  grid-template-columns:
+    [full-start] 1fr [center-start] repeat(
+      8,
+      [col-start] minmax(14rem, min-content) [col-end]
+    )
+    [center-end] 1fr [full-end];
+
+  grid-template-rows: 100vh;
+}

@@ -1,0 +1,51 @@
+.section-history {
+  background-color: #000000;
+  grid-column: full-start/full-end;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 80%;
+  margin: 0 auto;
+  align-items: center;
+  border-top: 1px solid $color-white;
+  color: $color-white;
+
+  &__item {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 3rem;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  &__date {
+    position: relative;
+    font-size: 2rem;
+    font-weight: 300;
+    font-style: italic;
+    display: grid;
+    justify-self: end;
+    padding: 2.5rem 4rem;
+    border-right: 2px solid $color-white;
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      height: 2rem;
+      width: 2rem;
+      background-color: $color-white;
+      border-radius: 50%;
+      top: 50%;
+      right: -1rem;
+      transform: translate(0, -50%);
+      color: $color-white;
+      font-size: 3rem;
+    }
+  }
+  &__description {
+    display: block;
+    width: 100%;
+    text-align: start;
+    font-size: 2rem;
+  }
+}
