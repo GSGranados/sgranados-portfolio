@@ -40,6 +40,10 @@
     flex: 1;
     position: relative;
     color: #ffffff; }
+  .section-about__detail {
+    display: none; }
+    .section-about__detail--active {
+      display: block; }
   .section-about__text::before {
     content: "\201C";
     position: absolute;
@@ -294,6 +298,132 @@ body {
       .section-history__description {
         font-size: 1.75rem; } }
 
+.overlay {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 100;
+  backdrop-filter: blur(3px);
+  z-index: 5;
+  transition: all 0.3s ease;
+  opacity: 1; }
+  .overlay--hidden {
+    visibility: hidden;
+    opacity: 0; }
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 65%;
+  background-color: white;
+  padding: 6rem;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .modal__close:link, .modal__close:active {
+    position: absolute;
+    text-decoration: none;
+    font-size: 5rem;
+    line-height: 1;
+    color: #000000;
+    font-weight: bolder;
+    top: 2.5rem;
+    right: 3.5rem;
+    transition: all 0.2s; }
+  .modal__close:hover {
+    color: #ba6bf0;
+    transform: scale(1.1); }
+  .modal__title {
+    color: #000000;
+    font-size: 3rem;
+    font-weight: 400;
+    font-style: italic;
+    transition: all 0.3s ease;
+    backface-visibility: hidden; }
+    .modal__title:hover {
+      color: #db78ff;
+      transform: scale(1.1); }
+  .modal__description {
+    margin-top: 2.5rem;
+    color: #000000;
+    font-style: italic;
+    font-size: 1.8rem;
+    margin-bottom: 1.75rem; }
+  .modal .modal-video {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .modal .modal-video__img {
+      height: 30rem;
+      box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.5); }
+  .modal__tech {
+    color: #000000;
+    font-size: 1.85rem;
+    font-style: italic; }
+  .modal__list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .modal__item {
+    color: #000000;
+    font-size: 1.65rem;
+    padding: 0 1rem; }
+    .modal__item:not(:last-of-type) {
+      margin-right: 2rem; }
+    .modal__item:not(:first-of-type) {
+      border-left: 1px solid #000000; }
+  .modal__cta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2.5rem; }
+  .modal__btn:link, .modal__btn:visited {
+    display: inline-block;
+    text-decoration: none;
+    padding: 1rem 2.5rem;
+    font-size: 1.75rem;
+    font-weight: 400; }
+    .modal__btn:link:not(:last-of-type), .modal__btn:visited:not(:last-of-type) {
+      margin-right: 2rem; }
+  .modal__reference-btn {
+    border: none;
+    background-color: #c012ff;
+    color: #fff;
+    border-radius: 10px;
+    transition: all 0.2s ease; }
+    .modal__reference-btn:hover {
+      background-color: #e292ff;
+      transform: scale(1.03) translateY(-1px);
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3); }
+    .modal__reference-btn:active {
+      background-color: #e292ff;
+      transform: scale(1.03) translateY(-1px);
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3); }
+  .modal__repo-btn {
+    border: none;
+    background-color: #8d17de;
+    color: #fff;
+    border-radius: 10px;
+    transition: all 0.2s ease; }
+    .modal__repo-btn:hover {
+      background-color: #c582f2;
+      transform: scale(1.03) translateY(-1px);
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3); }
+    .modal__repo-btn:active {
+      background-color: #c582f2;
+      transform: scale(1.03) translateY(-1px);
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3); }
+
 .portfolio {
   background-color: #000000;
   grid-column: full-start/full-end;
@@ -354,7 +484,8 @@ body {
     display: flex;
     align-items: center;
     padding: 3rem;
-    z-index: 2; }
+    z-index: 2;
+    transition: all 0.2s ease-in; }
     @media only screen and (max-width: 51.5625em) {
       .portfolio__card {
         flex-direction: column; } }

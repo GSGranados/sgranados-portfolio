@@ -53,6 +53,13 @@
     position: relative;
     color: #ffffff;
   }
+  &__detail {
+    display: none;
+
+    &--active {
+      display: block;
+    }
+  }
 
   &__text::before {
     content: "\201C";

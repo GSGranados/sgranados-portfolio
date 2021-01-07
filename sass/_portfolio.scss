@@ -38,6 +38,7 @@
     align-items: center;
     padding: 3rem;
     z-index: 2;
+    transition: all 0.2s ease-in;
 
     @media only screen and (max-width: 51.5625em) {
       flex-direction: column;

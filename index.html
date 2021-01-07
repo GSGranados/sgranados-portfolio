@@ -12,26 +12,27 @@
     <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
     <title>SGranados | Front-end developer</title>
   </head>
+
   <body class="container">
     <header class="header">
       <nav class="nav">
         <img src="img/logo.png" alt="Portfolio logo" class="nav__logo" />
         <ul class="nav__list">
-          <li class="nav__item"><a href="#" class="nav__link">About</a></li>
-          <li class="nav__item"><a href="#" class="nav__link">Services</a></li>
-          <li class="nav__item"><a href="#" class="nav__link">Portfolio</a></li>
+          <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+          <li class="nav__item"><a href="#services" class="nav__link">Services</a></li>
+          <li class="nav__item"><a href="#portfolio" class="nav__link">Portfolio</a></li>
           <li class="nav__item">
-            <a href="#" class="nav__link">History</a>
+            <a href="#history" class="nav__link">History</a>
           </li>
         </ul>
       </nav>
       <h1 class="heading-primary">I'm <span> Steven Granados</span></h1>
       <h3 class="sub-heading">Front-End Developer</h3>
       <div class="cta">
-        <a href="#" class="btn btn-portfolio">Check out my work!</a>
+        <a href="#portfolio" class="btn btn-portfolio">Check out my work!</a>
       </div>
     </header>
-    <section class="section-about">
+    <section class="section-about" id="about">
       <div class="u-center-text u-margin-bottom-small">
         <h2 class="heading-secondary">A little bit about me</h2>
       </div>
@@ -52,8 +53,7 @@
         </div>
         <div class="section-about__text">
           <div
-            class="u-center-text section-about__detail section-about__detail--active"
-            data-text="1"
+            class="u-center-text section-about__detail section-about__detail--1 section-about__detail--active"
           >
             <h3 class="heading-tertiary u-margin-bottom-medium">
               A Sharing and Respectful Person
@@ -67,10 +67,35 @@
               them!
             </p>
           </div>
+          <div
+            class="u-center-text section-about__detail section-about__detail--2"
+          >
+            <h3 class="heading-tertiary u-margin-bottom-medium">
+              An English fanatic
+            </h3>
+            <p class="paragraph">
+              I really enjoy the Enlgish language and the English culture in general. 
+              The majority of the content I usually consumue is in English, the comfort I feel talking on English is really neat.
+              I'm thankful for knowing this language because it has opened me different opportunities so that's a reason to continue practicing!
+            </p>
+          </div>
+          <div
+            class="u-center-text section-about__detail section-about__detail--3"
+          >
+            <h3 class="heading-tertiary u-margin-bottom-medium">
+              Passionately curious
+            </h3>
+            <p class="paragraph">
+             When it comes to code something and even more in the Front End field, 
+             there is variety of ways of showing some content or even creating a simple layout! 
+             There continuously new trends around the world of how to develop, present and create UI and 
+             I'd be more than happy to try some of those.
+            </p>
+          </div>
         </div>
       </div>
     </section>
-    <section class="section-services">
+    <section class="section-services" id="services">
       <div class="u-center-text u-margin-bottom-medium">
         <h2 class="heading-secondary">What I can do for you</h2>
       </div>
@@ -120,12 +145,12 @@
         </ul>
       </div>
     </section>
-    <div class="portfolio">
+    <div class="portfolio" id="portfolio">
       <div class="u-center-text u-margin-bottom-medium">
         <h2 class="heading-secondary">Some of my past work</h2>
       </div>
       <div class="portfolio__projects">
-        <div class="portfolio__card portfolio__card--1">
+        <div class="portfolio__card portfolio__card--1" data-project="1">
           <h4 class="portfolio__project-title">Marvel wiki</h4>
           <div class="portfolio__details">
             <p class="portfolio__description">
@@ -139,7 +164,7 @@
             <button class="portfolio__btn">See details &rarr;</button>
           </div>
         </div>
-        <div class="portfolio__card portfolio__card--2">
+        <div class="portfolio__card portfolio__card--2 " data-project="2">
           <h4 class="portfolio__project-title">
             Quake Finder and COVID tracker
           </h4>
@@ -155,7 +180,7 @@
             <button class="portfolio__btn">See details &rarr;</button>
           </div>
         </div>
-        <div class="portfolio__card portfolio__card--3">
+        <div class="portfolio__card portfolio__card--3" data-project="3">
           <h4 class="portfolio__project-title">Some JS apps</h4>
           <div class="portfolio__details">
             <p class="portfolio__description">
@@ -169,7 +194,7 @@
             <button class="portfolio__btn">See details &rarr;</button>
           </div>
         </div>
-        <div class="portfolio__card portfolio__card--4">
+        <div class="portfolio__card portfolio__card--4" data-project="4">
           <h4 class="portfolio__project-title">Portfolio Samples</h4>
           <div class="portfolio__details">
             <p class="portfolio__description">
@@ -185,7 +210,7 @@
         </div>
       </div>
     </div>
-    <section class="section-history">
+    <section class="section-history" id="history">
       <div class="u-center-text u-margin-bottom-medium u-margin-top-small">
         <h2 class="heading-secondary">Where I've been</h2>
       </div>
@@ -210,14 +235,38 @@
     <footer class="footer">
       <img src="img/logo.png" alt="Portfolio logo" class="footer__logo" />
       <ul class="footer__list">
-        <li class="footer__item"><a href="#" class="footer__link">About</a></li>
-        <li class="footer__item"><a href="#" class="footer__link">Services</a></li>
-        <li class="footer__item"><a href="#" class="footer__link">Portfolio</a></li>
-        <li class="footer__item"><a href="#" class="footer__link">History</a></li>
+        <li class="footer__item"><a href="#about" class="footer__link">About</a></li>
+        <li class="footer__item"><a href="#services" class="footer__link">Services</a></li>
+        <li class="footer__item"><a href="#portfolio" class="footer__link">Portfolio</a></li>
+        <li class="footer__item"><a href="#history" class="footer__link">History</a></li>
       </ul>
-      <a href="#" class="footer__btn">Come to see my Github! &rarr;</a>
+      <a href="https://github.com/GSGranados" target="blank" class="footer__btn">Come to see my Github! &rarr;</a>
       <span class="footer__copyright">&copy; SGranados | 2020</span>
     </footer>
+    <div class="overlay overlay--1 ">
+      <div class="modal">
+        <a href="#portfolio" class="modal__close">&times;</a>
+        <h3 class="modal__title u-margin-bottom-small">Marvel Wiki</h3>
+        <div class="modal-video">
+            <img src="img/project-1.gif" class="modal-video__img"/>
+        </div>
+        <p class="modal__description">We use the Free Marvel API as a source of our wikipedia, we fetch throughout the API, 
+          based on the parameters provided by us, and it returns us all the information that we need. 
+          Using Redux makes the state management more scalable
+        </p>
+        <h4 class="modal__tech u-margin-bottom-small">Techonologies I used</h4>
+        <ul class="modal__list">
+          <li class="modal__item">Javascript - ES6+</li>
+          <li class="modal__item">ReactJS</li>
+          <li class="modal__item">Redux</li>
+          <li class="modal__item">CSS - MaterialUI</li>
+        </ul>
+        <div class="modal__cta">
+          <a href="https://developer.marvel.com/" target="blank" class="modal__btn modal__reference-btn">API Used</a>
+          <a href="https://github.com/GSGranados/react-redux-marvel" target="blank" class="modal__btn modal__repo-btn">Github Rep!</a>
+        </div>
+      </div>
+    </div>
     <script src="js/script.js"></script>
   </body>
 </html>
