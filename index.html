@@ -243,9 +243,10 @@
       <a href="https://github.com/GSGranados" target="blank" class="footer__btn">Come to see my Github! &rarr;</a>
       <span class="footer__copyright">&copy; SGranados | 2020</span>
     </footer>
-    <div class="overlay overlay--1 ">
+    <div class="overlays">
+    <div class="overlay overlay--1 overlay--hidden ">
       <div class="modal">
-        <a href="#portfolio" class="modal__close">&times;</a>
+        <a href="#portfolio" class="modal__close" data-modal="1">&times;</a>
         <h3 class="modal__title u-margin-bottom-small">Marvel Wiki</h3>
         <div class="modal-video">
             <img src="img/project-1.gif" class="modal-video__img"/>
@@ -262,11 +263,92 @@
           <li class="modal__item">CSS - MaterialUI</li>
         </ul>
         <div class="modal__cta">
-          <a href="https://developer.marvel.com/" target="blank" class="modal__btn modal__reference-btn">API Used</a>
+          <a href="https://developer.marvel.com/" target="blank" class="modal__btn modal__reference-btn">Marvel API</a>
           <a href="https://github.com/GSGranados/react-redux-marvel" target="blank" class="modal__btn modal__repo-btn">Github Rep!</a>
         </div>
       </div>
     </div>
+    <div class="overlay overlay--2 overlay--hidden">
+      <div class="modal">
+        <a href="#portfolio" class="modal__close" data-modal="2">&times;</a>
+        <h3 class="modal__title u-margin-bottom-small">USGS and COVID tracker</h3>
+        <div class="modal-video">
+            <img src="img/project-2.gif" class="modal-video__img"/>
+        </div>
+        <p class="modal__description">Due to an extraordinary event on 2020, 
+          the Dev Community developed an API to keep track of all the COVID news. 
+          I decided to use highchartsJS with ReactJS and their API to build a Dashboard App to visualize that.
+          On the other side, I wanted to create a nice way of searching earth events like quakes, 
+          based on some parameter (mag, and date) and you can see the details and the source page of USGS.
+        </p>
+        <h4 class="modal__tech u-margin-bottom-small">Techonologies I used</h4>
+        <ul class="modal__list">
+          <li class="modal__item">React JS</li>
+          <li class="modal__item">Material UI</li>
+          <li class="modal__item">Axios</li>
+          <li class="modal__item">Node - NPM</li>
+        </ul>
+        <div class="modal__cta">
+          <a href="https://earthquake.usgs.gov/fdsnws/event/1/" target="blank" class="modal__btn modal__reference-btn">USGS API</a>
+          <a href="https://github.com/mathdroid/covid-19-api" target="blank" class="modal__btn modal__reference-btn">COVID API</a>
+          <a href="https://github.com/GSGranados/react-quakes" target="blank" class="modal__btn modal__repo-btn">USGS Rep</a>
+          <a href="https://github.com/GSGranados/react-covid" target="blank" class="modal__btn modal__repo-btn">COVID Rep</a>
+        </div>
+      </div>
+    </div>
+    <div class="overlay overlay--3 overlay--hidden">
+      <div class="modal">
+        <a href="#portfolio" class="modal__close" data-modal="3">&times;</a>
+        <h3 class="modal__title u-margin-bottom-small">Some JS Apps</h3>
+        <div class="modal-video">
+            <img src="img/project-3.gif" class="modal-video__img"/>
+        </div>
+        <p class="modal__description">
+          It is fun to play games, that is why I made a simple pig game to roll a dice until we reach 100, 
+          and each time you hit 1 y goes to player 2. For the second app, it is a Bank app to see all your movements, 
+          you can request a loan, sort your movements, etc. All using JS and arrays. The third one, is a map app to mark your workouts, 
+          using an external library (Leaflet) to render a map and call some map methods, go to each repo, 
+          download the code and just open the index.html file and enjoy!
+        </p>
+        <h4 class="modal__tech u-margin-bottom-small">Techonologies I used</h4>
+        <ul class="modal__list">
+          <li class="modal__item">Javascript - ES6+</li>
+          <li class="modal__item">HTML5</li>
+          <li class="modal__item">CSS3</li>
+          <li class="modal__item">Leaflet JS</li>
+        </ul>
+        <div class="modal__cta">
+          <a href="https://github.com/GSGranados/js-pig-game" target="blank" class="modal__btn modal__repo-btn">Game Repo</a>
+          <a href="https://github.com/GSGranados/bankist-app" target="blank" class="modal__btn modal__repo-btn">Bank Repo</a>
+          <a href="https://github.com/GSGranados/mapty-app" target="blank" class="modal__btn modal__repo-btn">Map Repo</a>
+        </div>
+      </div>
+    </div>
+    <div class="overlay overlay--4 overlay--hidden ">
+      <div class="modal">
+        <a href="#portfolio" class="modal__close" data-modal="4">&times;</a>
+        <h3 class="modal__title u-margin-bottom-small">Portfolio Samples</h3>
+        <div class="modal-video">
+            <img src="img/project-4.gif" class="modal-video__img"/>
+        </div>
+        <p class="modal__description">
+          A couple of portfolio samples I built just to showcase how good your skills are in the best way possible,
+           with some engaging interactions and great color palettes.
+        </p>
+        <h4 class="modal__tech u-margin-bottom-small">Techonologies I used</h4>
+        <ul class="modal__list">
+          <li class="modal__item">Javascript - ES6+</li>
+          <li class="modal__item">JQuery</li>
+          <li class="modal__item">HTML5</li>
+          <li class="modal__item">CSS3</li>
+        </ul>
+        <div class="modal__cta">
+          <a href="https://github.com/GSGranados/portfolio-html-css-js" target="blank" class="modal__btn modal__repo-btn">Portfolio Sample</a>
+          <a href="https://github.com/GSGranados/minimalist-portfolio" target="blank" class="modal__btn modal__repo-btn">Minimalist Portfolio</a>
+        </div>
+      </div>
+    </div>
+  </div>
     <script src="js/script.js"></script>
   </body>
 </html>

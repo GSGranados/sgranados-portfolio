@@ -357,6 +357,10 @@ body {
     font-style: italic;
     font-size: 1.8rem;
     margin-bottom: 1.75rem; }
+    @media only screen and (max-width: 46.875em) {
+      .modal__description {
+        font-size: 1.7rem;
+        text-align: center; } }
   .modal .modal-video {
     width: 80%;
     display: flex;
@@ -365,34 +369,58 @@ body {
     .modal .modal-video__img {
       height: 30rem;
       box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.5); }
+      @media only screen and (max-width: 51.5625em) {
+        .modal .modal-video__img {
+          height: 25rem; } }
+      @media only screen and (max-width: 46.875em) {
+        .modal .modal-video__img {
+          height: 20rem; } }
   .modal__tech {
     color: #000000;
     font-size: 1.85rem;
     font-style: italic; }
+    @media only screen and (max-width: 46.875em) {
+      .modal__tech {
+        font-size: 1.75rem; } }
   .modal__list {
     list-style: none;
     display: flex;
     justify-content: center;
     align-items: center; }
+    @media only screen and (max-width: 46.875em) {
+      .modal__list {
+        flex-direction: column; } }
   .modal__item {
     color: #000000;
     font-size: 1.65rem;
     padding: 0 1rem; }
     .modal__item:not(:last-of-type) {
       margin-right: 2rem; }
+      @media only screen and (max-width: 46.875em) {
+        .modal__item:not(:last-of-type) {
+          margin-right: 0; } }
     .modal__item:not(:first-of-type) {
       border-left: 1px solid #000000; }
+      @media only screen and (max-width: 46.875em) {
+        .modal__item:not(:first-of-type) {
+          border-left: 0; } }
   .modal__cta {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-top: 2.5rem; }
+    @media only screen and (max-width: 46.875em) {
+      .modal__cta {
+        margin-top: 1.75rem; } }
   .modal__btn:link, .modal__btn:visited {
     display: inline-block;
     text-decoration: none;
     padding: 1rem 2.5rem;
     font-size: 1.75rem;
     font-weight: 400; }
+    @media only screen and (max-width: 51.5625em) {
+      .modal__btn:link, .modal__btn:visited {
+        font-size: 1.2rem; } }
     .modal__btn:link:not(:last-of-type), .modal__btn:visited:not(:last-of-type) {
       margin-right: 2rem; }
   .modal__reference-btn {
@@ -400,7 +428,8 @@ body {
     background-color: #c012ff;
     color: #fff;
     border-radius: 10px;
-    transition: all 0.2s ease; }
+    transition: all 0.2s ease;
+    text-align: center; }
     .modal__reference-btn:hover {
       background-color: #e292ff;
       transform: scale(1.03) translateY(-1px);
@@ -414,7 +443,8 @@ body {
     background-color: #8d17de;
     color: #fff;
     border-radius: 10px;
-    transition: all 0.2s ease; }
+    transition: all 0.2s ease;
+    text-align: center; }
     .modal__repo-btn:hover {
       background-color: #c582f2;
       transform: scale(1.03) translateY(-1px);

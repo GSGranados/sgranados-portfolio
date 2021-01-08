@@ -6,6 +6,8 @@ const icons = document.querySelector(".section-about__icons");
 const aboutTexts = document.querySelector(".section-about__text");
 const footerNav = document.querySelector(".footer__list");
 const portfolioProjects = document.querySelector(".portfolio__projects");
+const overlays = document.querySelector(".overlays");
+const overlay = document.querySelector(".overlay");
 //Listeners and actions
 
 //Nav Menu scrolling into sections effect
@@ -72,3 +74,29 @@ const handleHover = function (e) {
 
 portfolioProjects.addEventListener("mouseover", handleHover.bind(0.5));
 portfolioProjects.addEventListener("mouseout", handleHover.bind(1));
+
+//Open Modals
+portfolioProjects.addEventListener("click", function (e) {
+  e.preventDefault();
+  const detailsBtn = e.target.closest(".portfolio__btn");
+  if (!detailsBtn) return;
+  const portfolioCard = detailsBtn
+    .closest(".portfolio__card")
+    .getAttribute("data-project");
+  const projectModal = document.querySelector(`.overlay--${portfolioCard}`);
+  projectModal.classList.toggle("overlay--hidden");
+});
+
+//Close Modals
+overlays.addEventListener("click", function (e) {
+  e.preventDefault();
+  if (e.target.closest(".modal__close")) {
+    const xButton = e.target.getAttribute("data-modal");
+    const modal = document.querySelector(`.overlay--${xButton}`);
+    modal.classList.toggle("overlay--hidden");
+  }
+  if (e.target.closest(".overlay")) {
+    const overlay = e.target;
+    overlay.classList.toggle("overlay--hidden");
+  }
+});
