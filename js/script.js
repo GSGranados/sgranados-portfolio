@@ -8,6 +8,8 @@ const footerNav = document.querySelector(".footer__list");
 const portfolioProjects = document.querySelector(".portfolio__projects");
 const overlays = document.querySelector(".overlays");
 const overlay = document.querySelector(".overlay");
+const navigation = document.querySelector(".navigation");
+const navigationList = document.querySelector(".navigation__list");
 //Listeners and actions
 
 //Nav Menu scrolling into sections effect
@@ -15,16 +17,13 @@ navMenu.addEventListener("click", function (e) {
   e.preventDefault();
   const link = e.target.closest(".nav__item");
   if (!link) return;
-  console.log(link);
   const linkValue = link.querySelector(".nav__link").getAttribute("href");
-  console.log(linkValue);
   document.querySelector(linkValue).scrollIntoView({ behavior: "smooth" });
 });
 
 //Scroll into portfolio section
 navBtn.addEventListener("click", function (e) {
   e.preventDefault();
-  console.log(portfolio);
   const link = navBtn.getAttribute("href");
   document.querySelector(link).scrollIntoView({ behavior: "smooth" });
 });
@@ -47,17 +46,6 @@ icons.addEventListener("click", function (e) {
       `.section-about__detail--${icon.getAttribute("data-content")}`
     )
     .classList.add("section-about__detail--active");
-});
-
-//Nav Menu scrolling into sections effect
-footerNav.addEventListener("click", function (e) {
-  e.preventDefault();
-  const link = e.target.closest(".footer__item");
-  if (!link) return;
-  console.log(link);
-  const linkValue = link.querySelector(".footer__link").getAttribute("href");
-  console.log(linkValue);
-  document.querySelector(linkValue).scrollIntoView({ behavior: "smooth" });
 });
 
 //handle hover for the project Cards
@@ -84,6 +72,7 @@ portfolioProjects.addEventListener("click", function (e) {
     .closest(".portfolio__card")
     .getAttribute("data-project");
   const projectModal = document.querySelector(`.overlay--${portfolioCard}`);
+  navigation.style.opacity = 0;
   projectModal.classList.toggle("overlay--hidden");
 });
 
@@ -93,10 +82,18 @@ overlays.addEventListener("click", function (e) {
   if (e.target.closest(".modal__close")) {
     const xButton = e.target.getAttribute("data-modal");
     const modal = document.querySelector(`.overlay--${xButton}`);
+    navigation.style.opacity = 1;
     modal.classList.toggle("overlay--hidden");
   }
-  if (e.target.closest(".overlay")) {
-    const overlay = e.target;
-    overlay.classList.toggle("overlay--hidden");
-  }
+});
+
+//Handling the navigation events to close the menu on a selected option
+navigationList.addEventListener("click", function (e) {
+  e.preventDefault();
+  const link = e.target.closest(".navigation__link");
+  if (!link) return;
+  const ref = link.getAttribute("href");
+  document.querySelector(ref).scrollIntoView({ behavior: "smooth" });
+  const checkbox = navigation.querySelector(".navigation__checkbox");
+  if (checkbox.checked) checkbox.checked = false;
 });

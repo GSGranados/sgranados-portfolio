@@ -4,11 +4,11 @@
   "description": "my personal portfolio to exercise my JS and CSS skills",
   "main": "index.html",
   "scripts": {
-    "watch:sass": "node-sass sass/main.scss css/style.css -w",
     "devserver": "live-server",
+    "watch:sass": "node-sass sass/main.scss css/style.css -w",
     "start": "npm-run-all --parallel devserver watch:sass",
     "compile:sass": "node-sass sass/main.scss css/style.comp.css",
-    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/style.comp.css -o css/style.prefix.css",
+    "prefix:css": "postcss --use autoprefixer -b \"last 10 versions\" css/style.comp.css  -o css/style.prefix.css",
     "compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
     "build:css": "npm-run-all compile:sass prefix:css compress:css"
   },
@@ -23,7 +23,7 @@
   "author": "Steven Granados",
   "license": "ISC",
   "devDependencies": {
-    "autoprefixer": "^7.1.4",
+    "autoprefixer": "^7.2.6",
     "concat": "^1.0.3",
     "node-sass": "^4.14.1",
     "npm-run-all": "^4.1.5",
